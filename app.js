@@ -11,7 +11,7 @@ app.get("/",function(req,res){
 app.get("/results",function(req,res){
 	// console.log(req.query);
 	var pref = req.query.pref;
-	var url="http://www.omdbapi.com/?" + pref + "=" + req.query.mov + "&apikey=thewdb";
+	var url="http://www.omdbapi.com/?" + pref + "=" + req.query.mov;
 items(url,function(error,response,body) {
   if(!error && response.statusCode==200){
 	  var results = JSON.parse(body);
