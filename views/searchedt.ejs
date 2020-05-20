@@ -1,0 +1,25 @@
+<%- include("partials/header2") %>
+<div class="container">
+<h2> <%= results.Title %> - <%= results.Year %></h2>
+<table>
+	<% results.Ratings.forEach(function(event){ %>
+	<tr>
+	<td><%= event.Source %></td>
+	<td><%= event.Value %></td>
+	</tr>
+	<% }) %>
+</table>	
+<table>
+	<tr>
+		<td> <img src= <%= results.Poster %> ></td>
+		<td id="content"> <table> <tr> <td> <strong>Plot: </strong></td><td><%= results.Plot %></td></tr> 
+			<tr> <td> <strong>Awards: </strong> </td><td><%= results.Awards %></td></tr> 
+			<tr> <td> <strong>Cast: </strong> </td><td><%= results.Actors %></td></tr>
+			<tr> <td> <strong>Director: </strong> </td><td><%= results.Director %></td></tr> </table>
+		</td>
+</table>
+<button>
+	<a href="/"> BACK TO HOME</a>
+</button>
+</div>
+<%- include("partials/footer") %>

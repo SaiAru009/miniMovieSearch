@@ -1,0 +1,15 @@
+<%- include("partials/header2") %>
+<div class="container">
+<table>
+<% results.forEach(function(event){ %>
+<tr>
+<td> <%= event.Title %> - <%= event.Year %></td>
+<td> <img src= <%= event.Poster %> ></td>	
+</tr>
+<% }) %>
+</table>
+<button>
+	<a href="/"> BACK TO HOME</a>
+</button>
+</div>
+<%- include("partials/footer") %>
